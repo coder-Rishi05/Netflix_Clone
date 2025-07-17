@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -8,7 +6,7 @@ function App() {
 
   return (
   <>
-    <h1>Netflix GPT</h1>
+  <h1 className='text-xs text-center'>Setup tailwind</h1>
   </>
   )
 }
