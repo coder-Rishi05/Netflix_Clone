@@ -4,9 +4,10 @@
 
 This project includes -
 
-- Authentication
+- Authentication 
 - Protected route
--  
+- Handling forms
+- GPT API 
 
 
 ```
