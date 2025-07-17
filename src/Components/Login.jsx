@@ -1,9 +1,11 @@
-const Login = ()=>{
-    reutrn (
-        <>
-        This is log in page.
-        </>
-    )
+import React from 'react'
+
+const Login = () => {
+  return (
+    <div>
+      Login Page
+    </div>
+  )
 }
 
 export default Login;

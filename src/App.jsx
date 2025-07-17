@@ -1,14 +1,14 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import Body from "./Components/Body";
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-  <>
-  <h1 className='text-xs text-center'>Setup tailwind</h1>
-  </>
-  )
+    <div>
+      <Body />
+    </div>
+  );
 }
 
-export default App
+export default App;
