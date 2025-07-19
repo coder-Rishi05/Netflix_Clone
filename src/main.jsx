@@ -15,6 +15,10 @@ const appRouter = createBrowserRouter([
     element:<Login />
   },
   {
+    path:'/login',
+    element:<Login />
+  },
+  {
     path:'/browse',
     element:<Browse />
   },
