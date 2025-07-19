@@ -12,7 +12,7 @@ import Browse from "./Components/Browse.jsx";
 const appRouter = createBrowserRouter([
   {
     path:'/',
-    element:<Login />
+    element:<App />
   },
   {
     path:'/login',

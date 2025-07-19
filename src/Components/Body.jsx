@@ -1,13 +1,13 @@
 import Browse from "./Browse"
 import Login from "./Login"
-
+import Header from "./Header"
 
 
 const Body = () => {
   return (
     <div>
-        <Login />
-        <Browse />
+
+      <Header />
     </div>
   )
 }
