@@ -7,7 +7,11 @@ const Login = () => {
     <div>
       <Header />
       <div className="">
-        <img src={img_data} alt="bg_image" />
+        <img
+          className="scale-[1.12] object-cover  object-center relative top-6.5 right-[-10] overflow-x-hidden "
+          src={img_data}
+          alt="bg_image"
+        />
       </div>
     </div>
   );
