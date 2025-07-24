@@ -18,7 +18,7 @@ This project includes -
     - Sign In /Sign up Form
     - redirect to Browse Page
      - Browse (after authentication)
- Header
+ Header ✅
      - Main Movie
      - Tailer in Background
 - Title & Description
