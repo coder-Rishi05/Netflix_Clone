@@ -27,3 +27,9 @@ This project includes -
 - NetflixGPT
      - Search Bar
      - Movie Suggestions
+
+### changing on click page.
+
+```
+trying to render the diffrent page on same page.
+```
