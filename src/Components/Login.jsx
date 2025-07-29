@@ -5,14 +5,19 @@ import { img_data } from "../Utils/imgSrc";
 const Login = () => {
   const [toggleState, setToggleState] = useState(true);
 
+  const [active, setActive] = useState(true);
+
   const handleToggleState = () => {
     setToggleState(!toggleState);
   };
 
+  const handleSetActive = () => {
+    setActive((active) => (active = false));
+  };
   return (
     <div>
       <Header />
-      <div className="relative">
+      <div className="relative ">
         <img className="z-1" src={img_data} alt="bg_image" />
 
         <form
@@ -48,9 +53,8 @@ const Login = () => {
               Forgot password
             </a>
             <p className="text-white text-md flex items-center gap-3 ml-17">
-             
               <input
-                className="dark:border-white-400/20 dark:scale-100 transition-all duration-500 ease-in-out dark:hover:scale-110 dark:checked:scale-100 w-4 h-4  dark:focus:ring-blue-600  text-gray-600 bg-white "
+                className="dark:border-white-400/20 dark:scale-100 transition-all duration-500 ease-in-out dark:hover:scale-110 dark:checked:scale-100 w-4 h-4  dark:focus:ring-blue-600  text-gray-600  "
                 type="checkbox"
               />{" "}
               Remember me
@@ -58,7 +62,7 @@ const Login = () => {
             <p className="text-white text-md  mt-4 ml-17">
               New to Netflix?
               <span
-                onClick={ () => handleToggleState()}
+                onClick={() => handleToggleState()}
                 className="font-bold hover:cursor-pointer hover:underline"
               >
                 Sign up now.
@@ -68,12 +72,20 @@ const Login = () => {
               This page is protected by Google reCAPTCHA to ensure <br /> you're
               not a bot.
             </p>
-            <a
-              className="text-blue-600 underline ml-17 hover:text-blue-950"
-              href="#"
-            >
-              Learn More
-            </a>
+            <div className=" m-auto">
+              <p
+                onClick={() => handleSetActive()}
+                className={`${
+                  active
+                    ? "text-blue-400 text-sm underline ml-17 hover:cursor-pointer "
+                    : "text-neutral-400 font-normal  text-[14px] tracking-tighter  ml-17   "
+                }`}
+              >
+                {active
+                  ? "Learn more"
+                  : "The information collected by Google reCAPTCHA is subject to the Google Privacy Policy and Terms of Service, and is used for providing, maintaining, and improving the reCAPTCHA service and for general security purposes (it is not used for personalised advertising by Google)."}
+              </p>
+            </div>
           </div>
         </form>
       </div>
