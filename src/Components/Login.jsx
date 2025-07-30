@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "./Header";
 import { img_data } from "../Utils/imgSrc";
+import { MdArrowDropDown } from "react-icons/md";
 
 const Login = () => {
   const [toggleState, setToggleState] = useState(true);
@@ -116,6 +117,15 @@ const Login = () => {
           <li className="underline list-none hover:cursor-pointer uppercase text-sm font-semibold text-gray-300/80">
             Corporate Information
           </li>
+        </div>
+        <div className="mt-8">
+          <div className="inline-flex items-center border hover:ring-1 ring-purple-500 border-gray-500 px-3 py-2 rounded text-gray-300 bg-transparent">
+            <MdArrowDropDown className="mr-1 text-lg" />
+            <select name="" id="">
+              <option value="English">English</option>
+              <option value="Hindi">Hindi</option>
+            </select>
+          </div>
         </div>
       </div>
     </div>
