@@ -14,12 +14,16 @@ const Login = () => {
   const handleSetActive = () => {
     setActive((active) => (active = false));
   };
+
   return (
     <div>
       <Header />
-      <div className="relative ">
-        <img className="z-1" src={img_data} alt="bg_image" />
-
+      <div className="relative w-full ">
+        <img
+          className="z-1 w-full h-full object-center object-cover "
+          src={img_data}
+          alt="bg_image"
+        />
         <form
           className="absolute z-10 bg-black/80 rounded-md top-[50%] pb-10 left-1/2  -translate-x-1/2 -translate-y-1/2"
           action=""
@@ -72,22 +76,47 @@ const Login = () => {
               This page is protected by Google reCAPTCHA to ensure <br /> you're
               not a bot.
             </p>
-            <div className=" m-auto">
+            <div className={`${active ? "" : "max-w-[350px] mx-auto"}`}>
               <p
                 onClick={() => handleSetActive()}
                 className={`${
                   active
                     ? "text-blue-400 text-sm underline ml-17 hover:cursor-pointer "
-                    : "text-neutral-400 font-normal  text-[14px] tracking-tighter  ml-17   "
+                    : "text-neutral-400 font-normal  text-[13px] tracking-tighter  "
                 }`}
               >
                 {active
                   ? "Learn more"
-                  : "The information collected by Google reCAPTCHA is subject to the Google Privacy Policy and Terms of Service, and is used for providing, maintaining, and improving the reCAPTCHA service and for general security purposes (it is not used for personalised advertising by Google)."}
+                  : `The information collected by Google reCAPTCHA is subject to the Google {}  and {} , and is used for providing, maintaining, and improving the reCAPTCHA service and for general security purposes (it is not used for personalised advertising by Google.`}
               </p>
             </div>
           </div>
         </form>
+      </div>
+      <div className="w-full bg-[#161616] p-8 md:p-20 md:pl-[10rem]">
+        <p className="text-gray-300 mb-8">
+          Questions? Call 000-800-919-1743 (Toll-Free)
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-y-4 gap-x-8 max-w-4xl">
+          <li className="underline list-none hover:cursor-pointer uppercase text-sm font-semibold text-gray-300/80">
+            faq
+          </li>
+          <li className="underline list-none hover:cursor-pointer uppercase text-sm font-semibold text-gray-300/80">
+            Help Center
+          </li>
+          <li className="underline list-none hover:cursor-pointer uppercase text-sm font-semibold text-gray-300/80">
+            Term of use
+          </li>
+          <li className="underline list-none hover:cursor-pointer uppercase text-sm font-semibold text-gray-300/80">
+            Privacy
+          </li>
+          <li className="underline list-none hover:cursor-pointer uppercase text-sm font-semibold text-gray-300/80">
+            Cookies Preference
+          </li>
+          <li className="underline list-none hover:cursor-pointer uppercase text-sm font-semibold text-gray-300/80">
+            Corporate Information
+          </li>
+        </div>
       </div>
     </div>
   );
