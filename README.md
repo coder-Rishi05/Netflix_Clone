@@ -34,3 +34,6 @@ This project includes -
 trying to render the diffrent page on same page.
 ```
 
+### Setting up forms using formik
+
+     npm i formik
