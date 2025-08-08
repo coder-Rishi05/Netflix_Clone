@@ -36,4 +36,11 @@ trying to render the diffrent page on same page.
 
 ### Setting up forms using formik
 
+
+```
+Used for handling the forms in react
+```
+
      npm i formik
+
+
