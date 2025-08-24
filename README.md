@@ -41,6 +41,14 @@ trying to render the diffrent page on same page.
 Used for handling the forms in react
 ```
 
-     npm i formik
+ npm i formik
+
+----
+
+also for ui daisy ui
+
+and animations 
+framer
+gsap
 
 
