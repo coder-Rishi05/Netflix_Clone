@@ -45,10 +45,3 @@ Used for handling the forms in react
 
 ----
 
-also for ui daisy ui
-
-and animations 
-framer
-gsap
-
-
