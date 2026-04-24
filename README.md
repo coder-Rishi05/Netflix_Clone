@@ -36,8 +36,19 @@ trying to render the diffrent page on same page.
 
 ### Setting up forms using formik
 
-npm i formik if the project is too big.
 
-### Implementing validations in form.
+```
+Used for handling the forms in react
+```
+
+ npm i formik
+
+----
+
+also for ui daisy ui
+
+and animations 
+framer
+gsap
 
 
