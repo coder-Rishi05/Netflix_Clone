@@ -13,13 +13,13 @@ const Login = () => {
   };
 
   const handleSetActive = () => {
-    setActive((active) => (active = false));
+    setActive((active) => !active);
   };
 
   return (
     <div>
       <Header />
-      <div className="relative w-full ">
+      <div className="relative w-full  ">
         <img
           className="z-1 w-full h-full object-center object-cover "
           src={img_data}
@@ -36,18 +36,18 @@ const Login = () => {
 
             {!isSignIN && (
               <input
-                className="py-4 px-5 my-[1rem] mx-[4rem] placeholder:caret-amber-50  bg-amber-50/5  border-1 border-amber-50 rounded placeholder:text-white placeholder:text-[16px] "
+                className="py-4 px-5 my-[1rem] mx-[4rem] text-white placeholder:caret-amber-50  bg-amber-50/5  border-1 border-amber-50 rounded placeholder:text-white placeholder:text-[16px] "
                 type="text"
                 placeholder="Full Name"
               />
             )}
             <input
-              className="py-4 px-5 my-[1rem] mx-[4rem] placeholder:caret-amber-50  bg-amber-50/5  border-1 border-amber-50 rounded placeholder:text-white placeholder:text-[16px] "
+              className="py-4 px-5 my-[1rem] mx-[4rem] text-white placeholder:caret-amber-50  bg-amber-50/5  border-1 border-amber-50 rounded placeholder:text-white placeholder:text-[16px] "
               type="text"
               placeholder="Email or mobile number"
             />
             <input
-              className="py-4 px-5 mb-[1rem] mx-[4rem]  bg-amber-50/5  border-1 border-amber-50 rounded placeholder:text-white placeholder:text-[16px] "
+              className="py-4 px-5 mb-[1rem] mx-[4rem] text-white bg-amber-50/5  border-1 border-amber-50 rounded placeholder:text-white placeholder:text-[16px] "
               type="password"
               placeholder="Password"
             />
@@ -128,9 +128,13 @@ const Login = () => {
         <div className="mt-8">
           <div className="inline-flex items-center border hover:ring-1 ring-purple-500 border-gray-500 px-3 py-2 rounded text-gray-300 bg-transparent">
             <MdArrowDropDown className="mr-1 text-lg" />
-            <select name="" id="">
-              <option value="English">English</option>
-              <option value="Hindi">Hindi</option>
+            <select name="language" id="">
+              <option className="text-black" value="English">
+                English
+              </option>
+              <option className="text-black" value="Hindi">
+                Hindi
+              </option>
             </select>
           </div>
         </div>
