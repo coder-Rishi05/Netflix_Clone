@@ -1,6 +1,10 @@
-export const checkValidData = (email, password) => {
+export const checkValidData = (email, password, name, isSignIn) => {
   if (!email || !password) {
-    return "Email and password are must to provide";
+    return "Email and password are required";
+  }
+
+  if (!isSignIn && !name) {
+    return "Name is required";
   }
 
   const isEmailValid = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(
@@ -8,12 +12,10 @@ export const checkValidData = (email, password) => {
   );
 
   const isPasswordValid =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
-      password,
-    );
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/.test(password);
 
-  if (!isEmailValid) return "Email Id not valid";
-  if (!isPasswordValid) return "password Id not valid";
+  if (!isEmailValid) return "Email is not valid";
+  if (!isPasswordValid) return "Password is not valid";
 
   return null;
 };

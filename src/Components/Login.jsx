@@ -7,14 +7,29 @@ import { checkValidData } from "../Utils/validation";
 const Login = () => {
   const [isSignIN, setIsSignIn] = useState(true);
   const [active, setActive] = useState(true);
-  const [name, setName] = useState("");
+
+  const [error, setError] = useState(null);
 
   const email = useRef(null);
+  const name = useRef(null);
   const password = useRef(null);
 
   const handleButtonClick = () => {
-    // checkValidData(email, password);
-    console.log(email,password)
+    // validate form data
+    const message = checkValidData(
+      email.current.value,
+      password.current.value,
+      name?.current?.value,
+      isSignIN,
+    );
+    setError(message);
+    console.log(
+      email.current.value,
+      password.current.value,
+      name.current.value,
+    );
+
+    // SignIn and Signup form
   };
 
   return (
@@ -38,15 +53,13 @@ const Login = () => {
             <input
               type="text"
               placeholder="Full Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              ref={name}
               className="w-full mb-4 p-3 bg-transparent border border-gray-400 rounded text-white"
             />
           )}
-
           <input
             ref={email}
-            type="text"
+            type="email"
             placeholder="Email"
             className="w-full mb-4 p-3 bg-transparent border border-gray-400 rounded text-white"
           />
@@ -57,7 +70,9 @@ const Login = () => {
             placeholder="Password"
             className="w-full mb-4 p-3 bg-transparent border border-gray-400 rounded text-white"
           />
-
+          {error && (
+            <p className="text-red-500 text-sm font-medium pb-4">{error}</p>
+          )}
           <button
             onClick={handleButtonClick}
             className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded font-bold"
@@ -86,7 +101,7 @@ const Login = () => {
               onClick={() => setIsSignIn(!isSignIN)}
               className="font-bold cursor-pointer hover:underline"
             >
-              Sign up now
+              {isSignIN ? "Signup Now" : "SignIn Now"}
             </span>
           </p>
 

@@ -1,5 +1,36 @@
 ### Netflix Clone
 
+### folder structure
+
+```
+
+├── public
+│   └── netflix_logo_icon_170919.svg
+├── src
+│   ├── Components
+│   │   ├── Body.jsx
+│   │   ├── Browse.jsx
+│   │   ├── Header.jsx
+│   │   ├── Home.jsx
+│   │   └── Login.jsx
+│   ├── Utils
+│   │   ├── data.js
+│   │   ├── imgSrc.js
+│   │   └── validation.js
+│   ├── assets
+│   │   └── react.svg
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── .gitignore
+├── README.md
+├── eslint.config.js
+├── index.html
+├── notes.md
+├── package-lock.json
+├── package.json
+└── vite.config.js
 ```
 
 This project includes -
@@ -44,4 +75,5 @@ Used for handling the forms in react
  npm i formik
 
 ----
+
 
